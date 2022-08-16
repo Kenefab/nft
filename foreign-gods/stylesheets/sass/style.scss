@@ -1,0 +1,385 @@
+//colors
+$bodyColor: #110317;
+$white: #ffffff;
+$creamyWhite: #dadada;
+
+//mixins
+@mixin font-block-open-sans($font-weight, $font-size, $line-height) {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: $font-weight;
+  font-size: $font-size;
+  line-height: $line-height;
+}
+
+@mixin font-block-poppins($font-weight, $font-size, $line-height) {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: $font-weight;
+  font-size: $font-size;
+  line-height: $line-height;
+}
+
+@mixin login-btn($margin-left, $margin-right) {
+  background: #110317;
+  box-shadow: inset 0px 4px 4px rgba(129, 4, 138, 0.8);
+  border: 1px solid 0px 4px 4px rgba(129, 4, 138, 0.8);
+  border-radius: 15px;
+  padding: 0 0.5rem;
+  margin-left: $margin-left;
+  margin-right: $margin-right;
+}
+
+@mixin login-link {
+  text-transform: uppercase;
+  text-align: center;
+  text-shadow: 0px 1px 2px $white;
+}
+
+@mixin contact-btn($margin-left) {
+  background: #510675;
+  border-radius: 15px;
+  padding: 0 0.5rem;
+  margin-left: $margin-left;
+  box-shadow: inset 0px 4px 4px rgba(129, 4, 138, 0.8);
+}
+
+@mixin contact-link {
+  text-transform: uppercase;
+  text-align: center;
+  text-shadow: 0px 1px 2px $white;
+}
+
+@mixin text-purple-gradient {
+  background: -webkit-linear-gradient(#d5b1e6, #510675);
+  background: linear-gradient(
+    90deg,
+    rgba(213, 177, 230, 1) 4%,
+    rgba(81, 6, 117, 1) 86%,
+    rgb(52, 2, 75) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/************************************************* base styles ***************************************/
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  color: $creamyWhite;
+}
+
+body {
+  padding-bottom: 0;
+  margin: 0;
+  background-color: $bodyColor;
+}
+/** end of base styles **/
+////////////////////////////////////
+
+//////////////////////////////////navbar styling
+.menu-bar {
+  padding: 1rem 0;
+
+  .navbar-brand {
+    color: $white !important;
+    @include font-block-open-sans(700, 25px, 36px);
+  }
+
+  .nav-item {
+    margin: 0.5rem 1.5rem;
+
+    .nav-link {
+      color: $white !important;
+      @include font-block-open-sans(400, 18px, 24px);
+    }
+  }
+
+  .contact-button {
+    @include contact-btn(1.5rem);
+
+    #contact-link {
+      @include contact-link();
+    }
+  }
+
+  .login-button {
+    @include login-btn(0.5rem, 0.5rem);
+
+    #login-link {
+      @include login-link();
+    }
+  }
+
+  .navbar-toggler {
+    outline: $bodyColor;
+    border: 1px solid $bodyColor;
+    background-color: $bodyColor;
+
+    #hamburger {
+      color: $white !important;
+    }
+  }
+}
+////////////////////////////////end of navbar styling
+
+///////////////////////////////////////welcome section
+.purple-patch-image {
+  position: relative;
+  margin-top: 4rem;
+  width: 100%;
+
+  @media only screen and (max-width: 1000px) {
+    margin-top: 2rem;
+  }
+
+  @media only screen and (max-width: 767px) {
+    margin-top: 0;
+  }
+
+  .purple-patch {
+    background: #1c022c;
+    opacity: 0.69;
+    -webkit-filter: blur(40px);
+    filter: blur(40px);
+    border-radius: 50%;
+    width: 50%;
+    height: 30em;
+    position: absolute;
+
+    @media only screen and (max-width: 991px) {
+      height: 20em;
+    }
+
+    @media only screen and (max-width: 767px) {
+      height: 10em;
+      margin-top: 4rem;
+    }
+
+    @media only screen and (max-width: 541px) {
+      margin-top: 2rem;
+      height: 7em;
+    }
+  }
+
+  #image-welcome-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    #first-image-container {
+      margin-top: 2rem;
+      width: 50%;
+      position: absolute;
+      flex-shrink: 1;
+      flex-grow: 1;
+      align-self: center;
+      // transform: rotate(-12.77deg);
+
+      @media only screen and (max-width: 500px) {
+        margin-top: 0;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+
+    #welcome {
+      width: 50%;
+      margin-left: 60%;
+      text-align: center;
+      flex-shrink: 1;
+      flex-grow: 1;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      h1 {
+        flex-shrink: 1;
+        flex-grow: 1;
+        width: 100%;
+        color: $creamyWhite;
+        text-transform: uppercase;
+        @include font-block-poppins(700, 65px, 75px);
+        align-self: center;
+
+        @media only screen and (max-width: 991px) {
+          @include font-block-poppins(700, 50px, 60px);
+        }
+
+        @media only screen and (max-width: 767px) {
+          @include font-block-poppins(700, 40px, 50px);
+        }
+
+        @media only screen and (max-width: 541px) {
+          @include font-block-poppins(700, 30px, 40px);
+        }
+
+        @media only screen and (max-width: 400px) {
+          @include font-block-poppins(700, 23px, 33px);
+        }
+
+        @media only screen and (max-width: 320px) {
+          @include font-block-poppins(700, 20px, 30px);
+        }
+
+        span {
+          background: -webkit-linear-gradient(#d5b1e6, #510675);
+          background: linear-gradient(
+            90deg,
+            rgba(213, 177, 230, 1) 4%,
+            rgba(81, 6, 117, 1) 86%,
+            rgb(52, 2, 75) 100%
+          );
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+
+      p {
+        flex-shrink: 1;
+        flex-grow: 1;
+        width: 100%;
+        text-align: center;
+        color: $creamyWhite;
+        @include font-block-poppins(400, 25px, 36px);
+
+        @media only screen and (max-width: 1000px) {
+          @include font-block-poppins(400, 20px, 30px);
+        }
+
+        @media only screen and (max-width: 767px) {
+          @include font-block-poppins(400, 18px, 25px);
+        }
+
+        @media only screen and (max-width: 500px) {
+          @include font-block-poppins(400, 16px, 23px);
+        }
+      }
+    }
+  }
+} ////////////////////////////////////////////////////end of welcome section styling
+
+/////////////////////////////wrap1 styling
+.wrap1 {
+  margin-top: 5rem;
+  display: flex;
+  border: 2px solid red;
+
+  #intro-jumbotron {
+    width: 50%;
+    align-self: center;
+
+    border: 2px solid blue;
+
+    h2 {
+      @include font-block-poppins(400, 65px, 75px);
+
+      //////////////////////////////////////////////////////////////////text  gradient
+      background: -webkit-linear-gradient(#d5b1e6, #510675);
+      background: linear-gradient(
+        90deg,
+        rgba(213, 177, 230, 1) 4%,
+        rgba(81, 6, 117, 1) 25%,
+        rgb(52, 2, 75) 100%
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    p {
+      margin-bottom: 2rem;
+    }
+    p:first-of-type {
+      @include font-block-poppins(400, 55px, 65px);
+    }
+
+    p:last-of-type {
+      @include font-block-poppins(400, 35px, 45px);
+    }
+  }
+  #second-image-container {
+    width: 50%;
+    border: 2px solid blue;
+    align-self: center;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+///////////////////////////////////////
+/*********************************************** footer styling *********************************************/
+footer {
+  background: #40055c;
+  margin-top: 50rem;
+  width: 100%;
+
+  #footer-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 2rem;
+
+    .footer-header {
+      flex-shrink: 1;
+      flex-grow: 1;
+      width: 30%;
+      @include font-block-open-sans(700, 25px, 36px);
+      //   border: 2px blue solid;
+
+      #footer-header-link {
+        color: $white;
+      }
+    }
+
+    #footer-items {
+      flex-shrink: 1;
+      flex-grow: 1;
+      //   border: 2px blue solid;
+      align-self: center;
+      list-style: none;
+
+      ///////////////////////////////////nested flexbox for footer-links
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      width: 70%;
+      margin: 0;
+      gap: 0.5rem;
+
+      @include font-block-open-sans(400, 18px, 24px);
+
+      .footer-links {
+        flex-shrink: 1;
+        flex-grow: 1;
+        color: $white;
+      }
+
+      .footer-contact-btn {
+        @include contact-btn(0);
+      }
+
+      #footer-contact-link {
+        @include contact-link();
+      }
+
+      .footer-login-btn {
+        @include login-btn(0, 0);
+      }
+
+      #footer-login-link {
+        @include login-link();
+      }
+    }
+  }
+}

@@ -1,0 +1,375 @@
+/************************************************* base styles ***************************************/
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  color: #dadada;
+}
+
+body {
+  padding-bottom: 0;
+  margin: 0;
+  background-color: #110317;
+}
+
+/** end of base styles **/
+.menu-bar {
+  padding: 1rem 0;
+}
+.menu-bar .navbar-brand {
+  color: #ffffff !important;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 36px;
+}
+.menu-bar .nav-item {
+  margin: 0.5rem 1.5rem;
+}
+.menu-bar .nav-item .nav-link {
+  color: #ffffff !important;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+}
+.menu-bar .contact-button {
+  background: #510675;
+  border-radius: 15px;
+  padding: 0 0.5rem;
+  margin-left: 1.5rem;
+  box-shadow: inset 0px 4px 4px rgba(129, 4, 138, 0.8);
+}
+.menu-bar .contact-button #contact-link {
+  text-transform: uppercase;
+  text-align: center;
+  text-shadow: 0px 1px 2px #ffffff;
+}
+.menu-bar .login-button {
+  background: #110317;
+  box-shadow: inset 0px 4px 4px rgba(129, 4, 138, 0.8);
+  border: 1px solid 0px 4px 4px rgba(129, 4, 138, 0.8);
+  border-radius: 15px;
+  padding: 0 0.5rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+.menu-bar .login-button #login-link {
+  text-transform: uppercase;
+  text-align: center;
+  text-shadow: 0px 1px 2px #ffffff;
+}
+.menu-bar .navbar-toggler {
+  outline: #110317;
+  border: 1px solid #110317;
+  background-color: #110317;
+}
+.menu-bar .navbar-toggler #hamburger {
+  color: #ffffff !important;
+}
+
+.purple-patch-image {
+  position: relative;
+  margin-top: 4rem;
+  width: 100%;
+}
+@media only screen and (max-width: 1000px) {
+  .purple-patch-image {
+    margin-top: 2rem;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .purple-patch-image {
+    margin-top: 0;
+  }
+}
+.purple-patch-image .purple-patch {
+  background: #1c022c;
+  opacity: 0.69;
+  -webkit-filter: blur(40px);
+  filter: blur(40px);
+  border-radius: 50%;
+  width: 50%;
+  height: 30em;
+  position: absolute;
+}
+@media only screen and (max-width: 991px) {
+  .purple-patch-image .purple-patch {
+    height: 20em;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .purple-patch-image .purple-patch {
+    height: 10em;
+    margin-top: 4rem;
+  }
+}
+@media only screen and (max-width: 541px) {
+  .purple-patch-image .purple-patch {
+    margin-top: 2rem;
+    height: 7em;
+  }
+}
+.purple-patch-image #image-welcome-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.purple-patch-image #image-welcome-container #first-image-container {
+  margin-top: 2rem;
+  width: 50%;
+  position: absolute;
+  flex-shrink: 1;
+  flex-grow: 1;
+  align-self: center;
+}
+@media only screen and (max-width: 500px) {
+  .purple-patch-image #image-welcome-container #first-image-container {
+    margin-top: 0;
+  }
+}
+.purple-patch-image #image-welcome-container #first-image-container img {
+  width: 100%;
+}
+.purple-patch-image #image-welcome-container #welcome {
+  width: 50%;
+  margin-left: 60%;
+  text-align: center;
+  flex-shrink: 1;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.purple-patch-image #image-welcome-container #welcome h1 {
+  flex-shrink: 1;
+  flex-grow: 1;
+  width: 100%;
+  color: #dadada;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 65px;
+  line-height: 75px;
+  align-self: center;
+}
+@media only screen and (max-width: 991px) {
+  .purple-patch-image #image-welcome-container #welcome h1 {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 60px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .purple-patch-image #image-welcome-container #welcome h1 {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 50px;
+  }
+}
+@media only screen and (max-width: 541px) {
+  .purple-patch-image #image-welcome-container #welcome h1 {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .purple-patch-image #image-welcome-container #welcome h1 {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 33px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .purple-patch-image #image-welcome-container #welcome h1 {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+.purple-patch-image #image-welcome-container #welcome h1 span {
+  background: -webkit-linear-gradient(#d5b1e6, #510675);
+  background: linear-gradient(90deg, rgb(213, 177, 230) 4%, rgb(81, 6, 117) 86%, rgb(52, 2, 75) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.purple-patch-image #image-welcome-container #welcome p {
+  flex-shrink: 1;
+  flex-grow: 1;
+  width: 100%;
+  text-align: center;
+  color: #dadada;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 36px;
+}
+@media only screen and (max-width: 1000px) {
+  .purple-patch-image #image-welcome-container #welcome p {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .purple-patch-image #image-welcome-container #welcome p {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .purple-patch-image #image-welcome-container #welcome p {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 23px;
+  }
+}
+
+.wrap1 {
+  margin-top: 5rem;
+  display: flex;
+  border: 2px solid red;
+}
+.wrap1 #intro-jumbotron {
+  width: 50%;
+  align-self: center;
+  border: 2px solid blue;
+}
+.wrap1 #intro-jumbotron h2 {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 65px;
+  line-height: 75px;
+  background: -webkit-linear-gradient(#d5b1e6, #510675);
+  background: linear-gradient(90deg, rgb(213, 177, 230) 4%, rgb(81, 6, 117) 25%, rgb(52, 2, 75) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.wrap1 #intro-jumbotron p {
+  margin-bottom: 2rem;
+}
+.wrap1 #intro-jumbotron p:first-of-type {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 55px;
+  line-height: 65px;
+}
+.wrap1 #intro-jumbotron p:last-of-type {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 45px;
+}
+.wrap1 #second-image-container {
+  width: 50%;
+  border: 2px solid blue;
+  align-self: center;
+}
+.wrap1 #second-image-container img {
+  width: 100%;
+}
+
+/*********************************************** footer styling *********************************************/
+footer {
+  background: #40055c;
+  margin-top: 50rem;
+  width: 100%;
+}
+footer #footer-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 2rem;
+}
+footer #footer-wrapper .footer-header {
+  flex-shrink: 1;
+  flex-grow: 1;
+  width: 30%;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 36px;
+}
+footer #footer-wrapper .footer-header #footer-header-link {
+  color: #ffffff;
+}
+footer #footer-wrapper #footer-items {
+  flex-shrink: 1;
+  flex-grow: 1;
+  align-self: center;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 70%;
+  margin: 0;
+  gap: 0.5rem;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+}
+footer #footer-wrapper #footer-items .footer-links {
+  flex-shrink: 1;
+  flex-grow: 1;
+  color: #ffffff;
+}
+footer #footer-wrapper #footer-items .footer-contact-btn {
+  background: #510675;
+  border-radius: 15px;
+  padding: 0 0.5rem;
+  margin-left: 0;
+  box-shadow: inset 0px 4px 4px rgba(129, 4, 138, 0.8);
+}
+footer #footer-wrapper #footer-items #footer-contact-link {
+  text-transform: uppercase;
+  text-align: center;
+  text-shadow: 0px 1px 2px #ffffff;
+}
+footer #footer-wrapper #footer-items .footer-login-btn {
+  background: #110317;
+  box-shadow: inset 0px 4px 4px rgba(129, 4, 138, 0.8);
+  border: 1px solid 0px 4px 4px rgba(129, 4, 138, 0.8);
+  border-radius: 15px;
+  padding: 0 0.5rem;
+  margin-left: 0;
+  margin-right: 0;
+}
+footer #footer-wrapper #footer-items #footer-login-link {
+  text-transform: uppercase;
+  text-align: center;
+  text-shadow: 0px 1px 2px #ffffff;
+}
+
+/*# sourceMappingURL=style.css.map */
