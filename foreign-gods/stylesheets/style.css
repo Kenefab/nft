@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /************************************************* base styles ***************************************/
 * {
   margin: 0px;
@@ -13,6 +14,37 @@ body {
 }
 
 /** end of base styles **/
+/************************************************* general styles ***************************************/
+.purple-buttons {
+  color: #ffffff;
+  background: #510675;
+  border-radius: 15px;
+  padding: 0 0.5rem;
+  margin-left: 0;
+  box-shadow: inset 0px 0px 4px 4px rgb(81, 6, 117);
+  max-width: 100%;
+  text-align: center;
+  padding: 0.5rem;
+  text-transform: uppercase;
+  float: right;
+  border-radius: 15%;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 30px;
+}
+@media only screen and (max-width: 767px) {
+  .purple-buttons {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+
+/************************************************* end of general styles ***************************************/
 .menu-bar {
   padding: 1rem 0;
 }
@@ -219,7 +251,7 @@ body {
   font-size: 25px;
   line-height: 36px;
 }
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 768px) {
   .purple-patch-image #image-welcome-container #welcome p {
     font-family: "Poppins", sans-serif;
     font-style: normal;
@@ -228,22 +260,22 @@ body {
     line-height: 30px;
   }
 }
-@media only screen and (max-width: 767px) {
-  .purple-patch-image #image-welcome-container #welcome p {
-    font-family: "Poppins", sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 25px;
-  }
-}
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 541px) {
   .purple-patch-image #image-welcome-container #welcome p {
     font-family: "Poppins", sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
-    line-height: 23px;
+    line-height: 26px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .purple-patch-image #image-welcome-container #welcome p {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
   }
 }
 
@@ -318,22 +350,13 @@ body {
   font-size: 55px;
   line-height: 65px;
 }
-@media only screen and (max-width: 991px) {
+@media only screen and (max-width: 768px) {
   .wrap1 #intro-jumbotron p:first-of-type {
     font-family: "Poppins", sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 40px;
-    line-height: 50px;
-  }
-}
-@media only screen and (max-width: 767px) {
-  .wrap1 #intro-jumbotron p:first-of-type {
-    font-family: "Poppins", sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 30px;
-    line-height: 40px;
+    font-size: 20px;
+    line-height: 30px;
   }
 }
 @media only screen and (max-width: 541px) {
@@ -341,8 +364,8 @@ body {
     font-family: "Poppins", sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 24px;
-    line-height: 30px;
+    font-size: 16px;
+    line-height: 26px;
   }
 }
 @media only screen and (max-width: 400px) {
@@ -350,17 +373,8 @@ body {
     font-family: "Poppins", sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 21px;
-    line-height: 30px;
-  }
-}
-@media only screen and (max-width: 320px) {
-  .wrap1 #intro-jumbotron p:first-of-type {
-    font-family: "Poppins", sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 30px;
+    font-size: 14px;
+    line-height: 24px;
   }
 }
 .wrap1 #intro-jumbotron p:last-of-type {
@@ -521,13 +535,22 @@ body {
   margin-top: 2rem;
   width: 100%;
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
   .wrap2 p {
     font-family: "Poppins", sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 24px;
-    line-height: 34px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+@media only screen and (max-width: 541px) {
+  .wrap2 p {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
   }
 }
 @media only screen and (max-width: 400px) {
@@ -535,8 +558,13 @@ body {
     font-family: "Poppins", sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 18px;
-    line-height: 28px;
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .wrap2 p {
+    margin-top: 1rem;
   }
 }
 
@@ -709,33 +737,6 @@ body {
     line-height: 28px;
   }
 }
-.wrap3 .purchase-token #purchase-btn {
-  color: #ffffff;
-  background: #510675;
-  border-radius: 15px;
-  padding: 0 0.5rem;
-  margin-left: 0;
-  box-shadow: inset 0px 0px 4px 4px rgb(81, 6, 117);
-  max-width: 70%;
-  text-align: center;
-  padding: 0.5rem;
-  float: right;
-  border-radius: 10%;
-  font-family: "Poppins", sans-serif;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 20px;
-  line-height: 30px;
-}
-@media only screen and (max-width: 767px) {
-  .wrap3 .purchase-token #purchase-btn {
-    font-family: "Poppins", sans-serif;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 14px;
-    line-height: 24px;
-  }
-}
 
 ::-webkit-scrollbar {
   height: 1rem;
@@ -754,6 +755,327 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
   border: 0.25rem solid hsl(281deg, 90.2%, 17.1%);
+}
+
+.wrap4 {
+  margin: 15rem auto 10rem;
+}
+.wrap4 h2 {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 65px;
+  line-height: 75px;
+  text-align: center;
+  text-transform: uppercase;
+}
+@media only screen and (max-width: 991px) {
+  .wrap4 h2 {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 60px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .wrap4 h2 {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 60px;
+  }
+}
+@media only screen and (max-width: 541px) {
+  .wrap4 h2 {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .wrap4 h2 {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 30px;
+  }
+}
+.wrap4 .image-grid {
+  margin: 50px auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-row-gap: 4rem;
+  padding-left: 1rem;
+}
+@media only screen and (max-width: 1000px) {
+  .wrap4 .image-grid {
+    grid-row-gap: 2rem;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .wrap4 .image-grid {
+    grid-row-gap: 1rem;
+  }
+}
+.wrap4 .image-grid .image-container {
+  width: 80%;
+}
+.wrap4 .image-grid .image-container img {
+  width: 100%;
+}
+.wrap4 .image-grid .purple-glow {
+  width: 50%;
+  min-height: 30px;
+  border-radius: 50%;
+  margin: 20px auto;
+  background: linear-gradient(0deg, #aeaeae, #aeaeae), #aeaeae;
+  opacity: 0.1;
+}
+@media only screen and (max-width: 768px) {
+  .wrap4 .image-grid .purple-glow {
+    min-height: 15px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .wrap4 .image-grid .purple-glow {
+    min-height: 10px;
+  }
+}
+.wrap4 .see-all-button {
+  width: max-content;
+  float: right;
+}
+
+.wrap5 {
+  width: 100%;
+}
+.wrap5 h2 {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 65px;
+  line-height: 75px;
+  text-transform: uppercase;
+  text-align: center;
+}
+@media only screen and (max-width: 991px) {
+  .wrap5 h2 {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 60px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .wrap5 h2 {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 60px;
+  }
+}
+@media only screen and (max-width: 541px) {
+  .wrap5 h2 {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .wrap5 h2 {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 30px;
+  }
+}
+.wrap5 .image-list-container {
+  margin-top: 2rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+}
+@media only screen and (max-width: 991px) {
+  .wrap5 .image-list-container {
+    flex-direction: column;
+  }
+}
+.wrap5 .image-list-container .image-container {
+  width: 40%;
+}
+@media only screen and (max-width: 991px) {
+  .wrap5 .image-list-container .image-container {
+    margin: 0 auto 20px;
+  }
+}
+.wrap5 .image-list-container .image-container img {
+  width: 100%;
+}
+.wrap5 .image-list-container .list-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.wrap5 .image-list-container .list-container #orange-bullet-list {
+  list-style: none;
+  width: 100%;
+  padding: 0 1rem;
+}
+.wrap5 .image-list-container .list-container #orange-bullet-list li {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 34px;
+  width: 100%;
+}
+@media only screen and (max-width: 768px) {
+  .wrap5 .image-list-container .list-container #orange-bullet-list li {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+@media only screen and (max-width: 541px) {
+  .wrap5 .image-list-container .list-container #orange-bullet-list li {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .wrap5 .image-list-container .list-container #orange-bullet-list li {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+.wrap5 .image-list-container .list-container #orange-bullet-list li::before {
+  content: "•"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: #d5752f; /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+.wrap5 .image-list-container .list-container #yellow-bullet-list {
+  list-style: none;
+  width: 100%;
+  padding: 0 1rem;
+}
+.wrap5 .image-list-container .list-container #yellow-bullet-list li {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 34px;
+}
+@media only screen and (max-width: 768px) {
+  .wrap5 .image-list-container .list-container #yellow-bullet-list li {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+@media only screen and (max-width: 541px) {
+  .wrap5 .image-list-container .list-container #yellow-bullet-list li {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .wrap5 .image-list-container .list-container #yellow-bullet-list li {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+.wrap5 .image-list-container .list-container #yellow-bullet-list li::before {
+  content: "•"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: #dec858; /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+.wrap5 .image-list-container .list-container #red-bullet-list {
+  list-style: none;
+  width: 100%;
+  padding: 0 1rem;
+}
+.wrap5 .image-list-container .list-container #red-bullet-list li {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 34px;
+}
+@media only screen and (max-width: 768px) {
+  .wrap5 .image-list-container .list-container #red-bullet-list li {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+@media only screen and (max-width: 541px) {
+  .wrap5 .image-list-container .list-container #red-bullet-list li {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .wrap5 .image-list-container .list-container #red-bullet-list li {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+.wrap5 .image-list-container .list-container #red-bullet-list li::before {
+  content: "•"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: #e65f61; /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+.wrap5 .more-info-button {
+  margin-top: 1rem;
+  width: max-content;
+  float: right;
 }
 
 /*********************************************** footer styling *********************************************/
