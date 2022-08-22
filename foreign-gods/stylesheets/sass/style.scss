@@ -2,6 +2,7 @@
 $bodyColor: #110317;
 $white: #ffffff;
 $creamyWhite: #dadada;
+$purple: #510675;
 
 //mixins
 @mixin font-block-open-sans($font-weight, $font-size, $line-height) {
@@ -21,9 +22,8 @@ $creamyWhite: #dadada;
 }
 
 @mixin login-btn($margin-left, $margin-right) {
-  background: #110317;
-  box-shadow: inset 0px 4px 4px rgba(129, 4, 138, 0.8);
-  border: 1px solid 0px 4px 4px rgba(129, 4, 138, 0.8);
+  background: $bodyColor;
+  box-shadow: inset 0px 0px 4px 4px rgba(81, 6, 117, 1);
   border-radius: 15px;
   padding: 0 0.5rem;
   margin-left: $margin-left;
@@ -37,11 +37,11 @@ $creamyWhite: #dadada;
 }
 
 @mixin contact-btn($margin-left) {
-  background: #510675;
+  background: $purple;
   border-radius: 15px;
   padding: 0 0.5rem;
   margin-left: $margin-left;
-  box-shadow: inset 0px 4px 4px rgba(129, 4, 138, 0.8);
+  box-shadow: inset 0px 0px 4px 4px rgba(81, 6, 117, 1);
 }
 
 @mixin contact-link {
@@ -51,7 +51,80 @@ $creamyWhite: #dadada;
 }
 
 @mixin text-purple-gradient {
-  background: -webkit-linear-gradient(#d5b1e6, #510675);
+  background: linear-gradient(
+    90deg,
+    rgba(213, 177, 230, 1) 4%,
+    rgba(81, 6, 117, 1) 86%,
+    rgb(52, 2, 75) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@mixin header-mq {
+  @media only screen and (max-width: 991px) {
+    @include font-block-poppins(700, 50px, 60px);
+  }
+
+  @media only screen and (max-width: 767px) {
+    @include font-block-poppins(700, 40px, 50px);
+  }
+
+  @media only screen and (max-width: 541px) {
+    @include font-block-poppins(700, 30px, 40px);
+  }
+
+  @media only screen and (max-width: 400px) {
+    @include font-block-poppins(700, 23px, 33px);
+  }
+
+  @media only screen and (max-width: 320px) {
+    @include font-block-poppins(700, 20px, 30px);
+  }
+}
+
+@mixin h2-mq {
+  @media only screen and (max-width: 991px) {
+    @include font-block-poppins(700, 50px, 60px);
+  }
+
+  @media only screen and (max-width: 767px) {
+    @include font-block-poppins(700, 50px, 60px);
+  }
+
+  @media only screen and (max-width: 541px) {
+    @include font-block-poppins(700, 30px, 40px);
+  }
+
+  @media only screen and (max-width: 320px) {
+    @include font-block-poppins(700, 28px, 30px);
+  }
+}
+
+@mixin p-mq {
+  @media only screen and (max-width: 991px) {
+    @include font-block-poppins(400, 40px, 50px);
+  }
+
+  @media only screen and (max-width: 767px) {
+    @include font-block-poppins(400, 30px, 40px);
+  }
+
+  @media only screen and (max-width: 541px) {
+    @include font-block-poppins(400, 24px, 30px);
+  }
+
+  @media only screen and (max-width: 400px) {
+    @include font-block-poppins(400, 21px, 30px);
+  }
+
+  @media only screen and (max-width: 320px) {
+    @include font-block-poppins(400, 18px, 30px);
+  }
+}
+
+@mixin foreign-gods {
   background: linear-gradient(
     90deg,
     rgba(213, 177, 230, 1) 4%,
@@ -201,43 +274,16 @@ body {
       h1 {
         flex-shrink: 1;
         flex-grow: 1;
+        align-self: center;
         width: 100%;
         color: $creamyWhite;
         text-transform: uppercase;
         @include font-block-poppins(700, 65px, 75px);
-        align-self: center;
-
-        @media only screen and (max-width: 991px) {
-          @include font-block-poppins(700, 50px, 60px);
-        }
-
-        @media only screen and (max-width: 767px) {
-          @include font-block-poppins(700, 40px, 50px);
-        }
-
-        @media only screen and (max-width: 541px) {
-          @include font-block-poppins(700, 30px, 40px);
-        }
-
-        @media only screen and (max-width: 400px) {
-          @include font-block-poppins(700, 23px, 33px);
-        }
-
-        @media only screen and (max-width: 320px) {
-          @include font-block-poppins(700, 20px, 30px);
-        }
+        @include header-mq();
 
         span {
-          background: -webkit-linear-gradient(#d5b1e6, #510675);
-          background: linear-gradient(
-            90deg,
-            rgba(213, 177, 230, 1) 4%,
-            rgba(81, 6, 117, 1) 86%,
-            rgb(52, 2, 75) 100%
-          );
-          background-clip: text;
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
+          @include foreign-gods();
+          font-weight: 400;
         }
       }
 
@@ -269,19 +315,17 @@ body {
 .wrap1 {
   margin-top: 5rem;
   display: flex;
-  border: 2px solid red;
+  flex-direction: row;
 
   #intro-jumbotron {
     width: 50%;
     align-self: center;
 
-    border: 2px solid blue;
-
     h2 {
       @include font-block-poppins(400, 65px, 75px);
+      @include h2-mq();
 
       //////////////////////////////////////////////////////////////////text  gradient
-      background: -webkit-linear-gradient(#d5b1e6, #510675);
       background: linear-gradient(
         90deg,
         rgba(213, 177, 230, 1) 4%,
@@ -295,18 +339,63 @@ body {
 
     p {
       margin-bottom: 2rem;
+
+      @media only screen and (max-width: 541px) {
+        margin-bottom: 1rem;
+      }
     }
     p:first-of-type {
       @include font-block-poppins(400, 55px, 65px);
+      @include p-mq();
     }
 
     p:last-of-type {
       @include font-block-poppins(400, 35px, 45px);
+
+      @media only screen and (max-width: 991px) {
+        @include font-block-poppins(400, 30px, 40px);
+      }
+
+      @media only screen and (max-width: 767px) {
+        @include font-block-poppins(400, 25px, 35px);
+      }
+
+      @media only screen and (max-width: 541px) {
+        @include font-block-poppins(400, 18px, 25px);
+      }
+
+      @media only screen and (max-width: 400px) {
+        @include font-block-poppins(400, 16px, 20px);
+      }
+    }
+
+    button {
+      @include font-block-poppins(400, 20px, 33px);
+      margin-top: 2rem;
+      background: $bodyColor;
+      box-shadow: inset 0px 0px 4px 4px rgba(81, 6, 117, 1);
+      border-radius: 10px;
+      padding: 0.5rem 1rem;
+      min-width: 30%;
+      color: $white;
+      text-transform: uppercase;
+
+      @media only screen and (max-width: 1000px) {
+        margin-top: 0;
+      }
+
+      @media only screen and (max-width: 767px) {
+        @include font-block-poppins(400, 18px, 23px);
+      }
+
+      @media only screen and (max-width: 500px) {
+        @include font-block-poppins(400, 12px, 18px);
+      }
     }
   }
   #second-image-container {
     width: 50%;
-    border: 2px solid blue;
+
     align-self: center;
 
     img {
@@ -314,13 +403,188 @@ body {
     }
   }
 }
+/////////////////////////////////////////////////////////////end of wrap1 styling
 
-///////////////////////////////////////
+/////////////////////////////////////////////////////////////wrap2 styling
+.wrap2 {
+  margin-top: 2rem;
+  width: 100%;
+  text-align: center;
+
+  @media only screen and (max-width: 1000px) {
+    margin-top: 5rem;
+  }
+
+  h2 {
+    @include font-block-poppins(700, 65px, 75px);
+    @include h2-mq();
+
+    span {
+      font-weight: 400;
+      @include foreign-gods();
+    }
+  }
+
+  p {
+    @include font-block-poppins(400, 28px, 48px);
+    margin-top: 2rem;
+    width: 100%;
+
+    @media only screen and (max-width: 767px) {
+      @include font-block-poppins(400, 24px, 34px);
+    }
+
+    @media only screen and (max-width: 400px) {
+      @include font-block-poppins(400, 18px, 28px);
+    }
+  }
+}
+/////////////////////////////////////////////////////////////end of wrap2 styling
+
+/////////////////////////////////////////////////////////wrap3 styling
+.wrap3 {
+  margin-top: 5rem;
+
+  #upcoming-header > h2 {
+    @include font-block-poppins(700, 65px, 75px);
+    @include h2-mq();
+  }
+
+  .media-scroller {
+    margin-top: 3rem;
+    display: grid;
+    gap: 3rem;
+    grid-auto-flow: column;
+    grid-auto-columns: 19%;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    width: 100%;
+    -ms-scroll-snap-type: inline mandatory;
+    scroll-snap-type: inline mandatory;
+    scroll-padding-inline: 1rem;
+    padding-bottom: 2rem;
+
+    @media only screen and (max-width: 767px) {
+      gap: 5rem;
+    }
+
+    .media-group {
+      text-align: center;
+      background: $bodyColor;
+      box-shadow: inset 0px 0px 4px 4px rgba(81, 6, 117, 1);
+      border-radius: 17px;
+      color: $creamyWhite;
+
+      @media only screen and (max-width: 767px) {
+        width: 150%;
+      }
+
+      @media only screen and (max-width: 400px) {
+        width: 200%;
+      }
+
+      .number-tag {
+        @include font-block-poppins(700, 24px, 34px);
+        position: relative;
+        background: rgba(81, 6, 117, 0.5);
+        opacity: 0.9;
+        border-radius: 40%;
+        width: 40%;
+        text-align: center;
+
+        @media only screen and (max-width: 767px) {
+          @include font-block-poppins(700, 18px, 28px);
+        }
+      }
+
+      .media-head-el {
+        text-transform: uppercase;
+        padding-top: 1rem;
+        @include font-block-poppins(700, 20px, 35px);
+        inline-size: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+
+        @media only screen and (max-width: 545px) {
+          @include font-block-poppins(700, 18px, 28px);
+        }
+      }
+
+      p {
+        @include font-block-poppins(400, 16px, 26px);
+        padding: 1rem;
+
+        @media only screen and (max-width: 545px) {
+          @include font-block-poppins(400, 12px, 22px);
+        }
+      }
+    }
+  }
+
+  .media-scroller > * {
+    scroll-snap-align: start;
+  }
+
+  .purchase-token {
+    float: right;
+    margin-top: 3rem;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+
+    p {
+      text-transform: uppercase;
+      @include font-block-poppins(700, 25px, 35px);
+
+      @media only screen and (max-width: 767px) {
+        @include font-block-poppins(700, 18px, 28px);
+      }
+    }
+
+    #purchase-btn {
+      color: $white;
+      @include contact-btn(0);
+
+      max-width: 70%;
+      text-align: center;
+      padding: 0.5rem;
+      float: right;
+      border-radius: 10%;
+      @include font-block-poppins(300, 20px, 30px);
+
+      @media only screen and (max-width: 767px) {
+        @include font-block-poppins(300, 14px, 24px);
+      }
+    }
+  }
+}
+//////////////////////////////////////////////////////////end of wrap3 styling
+
+/////////////////////////////////////////////////////////scrollbar styling
+::-webkit-scrollbar {
+  height: 1rem;
+}
+::-webkit-scrollbar-track {
+  background: hsl(281, 90.2%, 10.1%);
+  border-radius: 100vw;
+  margin-block: 0.5rem;
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(281, 90.2%, 15.1%);
+  border-radius: 100vw;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  border: 0.25rem solid hsl(281, 90.2%, 17.1%);
+}
+/////////////////////////////////////////////////////////scrollbar styling
+
 /*********************************************** footer styling *********************************************/
 footer {
   background: #40055c;
-  margin-top: 50rem;
+  margin-top: 20rem;
   width: 100%;
+  padding-bottom: 0.5rem;
 
   #footer-wrapper {
     display: flex;
@@ -351,6 +615,7 @@ footer {
 
       ///////////////////////////////////nested flexbox for footer-links
       display: flex;
+      flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-between;
       width: 70%;

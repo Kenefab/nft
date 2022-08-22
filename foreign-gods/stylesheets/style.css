@@ -40,7 +40,7 @@ body {
   border-radius: 15px;
   padding: 0 0.5rem;
   margin-left: 1.5rem;
-  box-shadow: inset 0px 4px 4px rgba(129, 4, 138, 0.8);
+  box-shadow: inset 0px 0px 4px 4px rgb(81, 6, 117);
 }
 .menu-bar .contact-button #contact-link {
   text-transform: uppercase;
@@ -49,8 +49,7 @@ body {
 }
 .menu-bar .login-button {
   background: #110317;
-  box-shadow: inset 0px 4px 4px rgba(129, 4, 138, 0.8);
-  border: 1px solid 0px 4px 4px rgba(129, 4, 138, 0.8);
+  box-shadow: inset 0px 0px 4px 4px rgb(81, 6, 117);
   border-radius: 15px;
   padding: 0 0.5rem;
   margin-left: 0.5rem;
@@ -146,6 +145,7 @@ body {
 .purple-patch-image #image-welcome-container #welcome h1 {
   flex-shrink: 1;
   flex-grow: 1;
+  align-self: center;
   width: 100%;
   color: #dadada;
   text-transform: uppercase;
@@ -154,7 +154,6 @@ body {
   font-weight: 700;
   font-size: 65px;
   line-height: 75px;
-  align-self: center;
 }
 @media only screen and (max-width: 991px) {
   .purple-patch-image #image-welcome-container #welcome h1 {
@@ -202,11 +201,11 @@ body {
   }
 }
 .purple-patch-image #image-welcome-container #welcome h1 span {
-  background: -webkit-linear-gradient(#d5b1e6, #510675);
   background: linear-gradient(90deg, rgb(213, 177, 230) 4%, rgb(81, 6, 117) 86%, rgb(52, 2, 75) 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-weight: 400;
 }
 .purple-patch-image #image-welcome-container #welcome p {
   flex-shrink: 1;
@@ -251,12 +250,11 @@ body {
 .wrap1 {
   margin-top: 5rem;
   display: flex;
-  border: 2px solid red;
+  flex-direction: row;
 }
 .wrap1 #intro-jumbotron {
   width: 50%;
   align-self: center;
-  border: 2px solid blue;
 }
 .wrap1 #intro-jumbotron h2 {
   font-family: "Poppins", sans-serif;
@@ -264,14 +262,54 @@ body {
   font-weight: 400;
   font-size: 65px;
   line-height: 75px;
-  background: -webkit-linear-gradient(#d5b1e6, #510675);
   background: linear-gradient(90deg, rgb(213, 177, 230) 4%, rgb(81, 6, 117) 25%, rgb(52, 2, 75) 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+@media only screen and (max-width: 991px) {
+  .wrap1 #intro-jumbotron h2 {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 60px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .wrap1 #intro-jumbotron h2 {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 60px;
+  }
+}
+@media only screen and (max-width: 541px) {
+  .wrap1 #intro-jumbotron h2 {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .wrap1 #intro-jumbotron h2 {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 30px;
+  }
+}
 .wrap1 #intro-jumbotron p {
   margin-bottom: 2rem;
+}
+@media only screen and (max-width: 541px) {
+  .wrap1 #intro-jumbotron p {
+    margin-bottom: 1rem;
+  }
 }
 .wrap1 #intro-jumbotron p:first-of-type {
   font-family: "Poppins", sans-serif;
@@ -280,6 +318,51 @@ body {
   font-size: 55px;
   line-height: 65px;
 }
+@media only screen and (max-width: 991px) {
+  .wrap1 #intro-jumbotron p:first-of-type {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 50px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .wrap1 #intro-jumbotron p:first-of-type {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+@media only screen and (max-width: 541px) {
+  .wrap1 #intro-jumbotron p:first-of-type {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .wrap1 #intro-jumbotron p:first-of-type {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 30px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .wrap1 #intro-jumbotron p:first-of-type {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
 .wrap1 #intro-jumbotron p:last-of-type {
   font-family: "Poppins", sans-serif;
   font-style: normal;
@@ -287,20 +370,398 @@ body {
   font-size: 35px;
   line-height: 45px;
 }
+@media only screen and (max-width: 991px) {
+  .wrap1 #intro-jumbotron p:last-of-type {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .wrap1 #intro-jumbotron p:last-of-type {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 35px;
+  }
+}
+@media only screen and (max-width: 541px) {
+  .wrap1 #intro-jumbotron p:last-of-type {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .wrap1 #intro-jumbotron p:last-of-type {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+.wrap1 #intro-jumbotron button {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 33px;
+  margin-top: 2rem;
+  background: #110317;
+  box-shadow: inset 0px 0px 4px 4px rgb(81, 6, 117);
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  min-width: 30%;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+@media only screen and (max-width: 1000px) {
+  .wrap1 #intro-jumbotron button {
+    margin-top: 0;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .wrap1 #intro-jumbotron button {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .wrap1 #intro-jumbotron button {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
 .wrap1 #second-image-container {
   width: 50%;
-  border: 2px solid blue;
   align-self: center;
 }
 .wrap1 #second-image-container img {
   width: 100%;
 }
 
+.wrap2 {
+  margin-top: 2rem;
+  width: 100%;
+  text-align: center;
+}
+@media only screen and (max-width: 1000px) {
+  .wrap2 {
+    margin-top: 5rem;
+  }
+}
+.wrap2 h2 {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 65px;
+  line-height: 75px;
+}
+@media only screen and (max-width: 991px) {
+  .wrap2 h2 {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 60px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .wrap2 h2 {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 60px;
+  }
+}
+@media only screen and (max-width: 541px) {
+  .wrap2 h2 {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .wrap2 h2 {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 30px;
+  }
+}
+.wrap2 h2 span {
+  font-weight: 400;
+  background: linear-gradient(90deg, rgb(213, 177, 230) 4%, rgb(81, 6, 117) 86%, rgb(52, 2, 75) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.wrap2 p {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 48px;
+  margin-top: 2rem;
+  width: 100%;
+}
+@media only screen and (max-width: 767px) {
+  .wrap2 p {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 34px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .wrap2 p {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+
+.wrap3 {
+  margin-top: 5rem;
+}
+.wrap3 #upcoming-header > h2 {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 65px;
+  line-height: 75px;
+}
+@media only screen and (max-width: 991px) {
+  .wrap3 #upcoming-header > h2 {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 60px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .wrap3 #upcoming-header > h2 {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 60px;
+  }
+}
+@media only screen and (max-width: 541px) {
+  .wrap3 #upcoming-header > h2 {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .wrap3 #upcoming-header > h2 {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 30px;
+  }
+}
+.wrap3 .media-scroller {
+  margin-top: 3rem;
+  display: grid;
+  gap: 3rem;
+  grid-auto-flow: column;
+  grid-auto-columns: 19%;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  width: 100%;
+  -ms-scroll-snap-type: inline mandatory;
+  scroll-snap-type: inline mandatory;
+  scroll-padding-inline: 1rem;
+  padding-bottom: 2rem;
+}
+@media only screen and (max-width: 767px) {
+  .wrap3 .media-scroller {
+    gap: 5rem;
+  }
+}
+.wrap3 .media-scroller .media-group {
+  text-align: center;
+  background: #110317;
+  box-shadow: inset 0px 0px 4px 4px rgb(81, 6, 117);
+  border-radius: 17px;
+  color: #dadada;
+}
+@media only screen and (max-width: 767px) {
+  .wrap3 .media-scroller .media-group {
+    width: 150%;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .wrap3 .media-scroller .media-group {
+    width: 200%;
+  }
+}
+.wrap3 .media-scroller .media-group .number-tag {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 34px;
+  position: relative;
+  background: rgba(81, 6, 117, 0.5);
+  opacity: 0.9;
+  border-radius: 40%;
+  width: 40%;
+  text-align: center;
+}
+@media only screen and (max-width: 767px) {
+  .wrap3 .media-scroller .media-group .number-tag {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+.wrap3 .media-scroller .media-group .media-head-el {
+  text-transform: uppercase;
+  padding-top: 1rem;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 35px;
+  inline-size: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+@media only screen and (max-width: 545px) {
+  .wrap3 .media-scroller .media-group .media-head-el {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+.wrap3 .media-scroller .media-group p {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  padding: 1rem;
+}
+@media only screen and (max-width: 545px) {
+  .wrap3 .media-scroller .media-group p {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 22px;
+  }
+}
+.wrap3 .media-scroller > * {
+  scroll-snap-align: start;
+}
+.wrap3 .purchase-token {
+  float: right;
+  margin-top: 3rem;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+.wrap3 .purchase-token p {
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 35px;
+}
+@media only screen and (max-width: 767px) {
+  .wrap3 .purchase-token p {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+.wrap3 .purchase-token #purchase-btn {
+  color: #ffffff;
+  background: #510675;
+  border-radius: 15px;
+  padding: 0 0.5rem;
+  margin-left: 0;
+  box-shadow: inset 0px 0px 4px 4px rgb(81, 6, 117);
+  max-width: 70%;
+  text-align: center;
+  padding: 0.5rem;
+  float: right;
+  border-radius: 10%;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 30px;
+}
+@media only screen and (max-width: 767px) {
+  .wrap3 .purchase-token #purchase-btn {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+
+::-webkit-scrollbar {
+  height: 1rem;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(281deg, 90.2%, 10.1%);
+  border-radius: 100vw;
+  margin-block: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(281deg, 90.2%, 15.1%);
+  border-radius: 100vw;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  border: 0.25rem solid hsl(281deg, 90.2%, 17.1%);
+}
+
 /*********************************************** footer styling *********************************************/
 footer {
   background: #40055c;
-  margin-top: 50rem;
+  margin-top: 20rem;
   width: 100%;
+  padding-bottom: 0.5rem;
 }
 footer #footer-wrapper {
   display: flex;
@@ -329,6 +790,7 @@ footer #footer-wrapper #footer-items {
   align-self: center;
   list-style: none;
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
   width: 70%;
@@ -350,7 +812,7 @@ footer #footer-wrapper #footer-items .footer-contact-btn {
   border-radius: 15px;
   padding: 0 0.5rem;
   margin-left: 0;
-  box-shadow: inset 0px 4px 4px rgba(129, 4, 138, 0.8);
+  box-shadow: inset 0px 0px 4px 4px rgb(81, 6, 117);
 }
 footer #footer-wrapper #footer-items #footer-contact-link {
   text-transform: uppercase;
@@ -359,8 +821,7 @@ footer #footer-wrapper #footer-items #footer-contact-link {
 }
 footer #footer-wrapper #footer-items .footer-login-btn {
   background: #110317;
-  box-shadow: inset 0px 4px 4px rgba(129, 4, 138, 0.8);
-  border: 1px solid 0px 4px 4px rgba(129, 4, 138, 0.8);
+  box-shadow: inset 0px 0px 4px 4px rgb(81, 6, 117);
   border-radius: 15px;
   padding: 0 0.5rem;
   margin-left: 0;
