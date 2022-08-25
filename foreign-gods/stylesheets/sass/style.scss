@@ -50,18 +50,6 @@ $purple: #510675;
   text-shadow: 0px 1px 2px $white;
 }
 
-@mixin text-purple-gradient {
-  background: linear-gradient(
-    90deg,
-    rgba(213, 177, 230, 1) 4%,
-    rgba(81, 6, 117, 1) 86%,
-    rgb(52, 2, 75) 100%
-  );
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
 @mixin header-mq {
   @media only screen and (max-width: 991px) {
     @include font-block-poppins(700, 50px, 60px);
@@ -338,17 +326,7 @@ body {
     h2 {
       @include font-block-poppins(400, 65px, 75px);
       @include h2-mq();
-
-      //////////////////////////////////////////////////////////////////text  gradient
-      background: linear-gradient(
-        90deg,
-        rgba(213, 177, 230, 1) 4%,
-        rgba(81, 6, 117, 1) 25%,
-        rgb(52, 2, 75) 100%
-      );
-      background-clip: text;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      @include foreign-gods();
     }
 
     p {
@@ -481,11 +459,15 @@ body {
     }
 
     .media-group {
+      @mixin purple-glow-container($border-radius) {
+        background: $bodyColor;
+        box-shadow: inset 0px 0px 4px 4px rgba(81, 6, 117, 1);
+        border-radius: $border-radius;
+        color: $creamyWhite;
+      }
+
       text-align: center;
-      background: $bodyColor;
-      box-shadow: inset 0px 0px 4px 4px rgba(81, 6, 117, 1);
-      border-radius: 17px;
-      color: $creamyWhite;
+      @include purple-glow-container(17px);
 
       @media only screen and (max-width: 767px) {
         width: 150%;
@@ -503,9 +485,11 @@ body {
         border-radius: 40%;
         width: 40%;
         text-align: center;
+        margin-left: 0.5%;
 
         @media only screen and (max-width: 767px) {
           @include font-block-poppins(700, 18px, 28px);
+          margin-left: 1.5%;
         }
       }
 
@@ -588,7 +572,7 @@ body {
   }
 
   .image-grid {
-    margin: 50px auto;
+    margin: 50px auto 20px;
     width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -623,6 +607,7 @@ body {
       }
       @media only screen and (max-width: 500px) {
         min-height: 10px;
+        margin: 10px auto;
       }
     }
   }
@@ -728,6 +713,120 @@ body {
     margin-top: 1rem;
     width: max-content;
     float: right;
+  }
+}
+/////////////////////////////////////////////////////////end of wrap5 div styling
+
+/////////////////////////////////////////////////////////wrap6 div styling
+.wrap6 {
+  margin-top: 130px;
+
+  #flex {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+
+    @media only screen and (max-width: 767px) {
+      flex-direction: column-reverse;
+    }
+
+    .our-clients-container {
+      width: 100%;
+      align-items: center;
+
+      @media only screen and (max-width: 767px) {
+        width: 100%;
+      }
+
+      h2 {
+        @include font-block-poppins(700, 65px, 75px);
+        @include h2-mq();
+
+        @media only screen and (max-width: 767px) {
+          margin-top: 50px;
+          text-align: center;
+        }
+      }
+
+      p {
+        @include font-block-poppins(400, 24px, 34px);
+        @include p-mq();
+        margin-top: 30px;
+        text-align: left;
+
+        @media only screen and (max-width: 767px) {
+          text-align: center;
+          margin-top: 20px;
+        }
+      }
+
+      #learn-more-container {
+        margin-top: 1.5rem;
+        width: 100%;
+        display: flex;
+
+        #learn-more-btn {
+          @media only screen and (max-width: 767px) {
+            float: none;
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+
+    .images-grid-conatiner {
+      width: 70%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-row-gap: 2rem;
+
+      justify-items: center;
+
+      .image-star-container {
+        width: 70%;
+        background: $bodyColor;
+        box-shadow: inset 0px 0px 4px 4px rgba(81, 6, 117, 1);
+        border-radius: 10px;
+        color: $creamyWhite;
+        padding: 10px;
+        display: flex;
+
+        flex-direction: column;
+        align-items: center;
+
+        img {
+          width: 50%;
+          padding-top: 0.5rem;
+
+          @media only screen and (max-width: 767px) {
+            width: 30%;
+          }
+        }
+
+        .stars-group-container {
+          width: 80%;
+          display: flex;
+          gap: 0.1rem;
+          margin: 0 auto;
+          padding-bottom: 0.5rem;
+
+          .star-container {
+            width: 100%;
+
+            img {
+              width: 100%;
+              padding-top: 1rem;
+
+              @media only screen and (max-width: 547px) {
+                padding-top: 0;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
 
