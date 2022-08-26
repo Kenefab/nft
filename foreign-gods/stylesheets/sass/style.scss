@@ -40,9 +40,9 @@ $font-poppins: "Poppins", sans-serif;
 @mixin contact-btn($margin-left) {
   background: $purple;
   border-radius: 15px;
+  box-shadow: inset 0px 0px 4px 4px rgba(81, 6, 117, 1);
   padding: 0 0.5rem;
   margin-left: $margin-left;
-  box-shadow: inset 0px 0px 4px 4px rgba(81, 6, 117, 1);
 }
 
 @mixin contact-link {
@@ -951,24 +951,26 @@ body {
 /*********************************************** footer styling *********************************************/
 footer {
   background: #40055c;
-  margin-top: 20rem;
+  margin-top: 2rem;
   width: 100%;
   padding-bottom: 0.5rem;
 
   #footer-wrapper {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 2rem;
     justify-content: space-between;
     width: 100%;
     padding-top: 2rem;
+    flex-wrap: wrap;
+    align-items: center;
 
     .footer-header {
       flex-shrink: 1;
       flex-grow: 1;
-      width: 30%;
+      width: 100%;
+      width: max-content;
       @include font-block-open-sans(700, 25px, 36px);
-      //   border: 2px blue solid;
 
       #footer-header-link {
         color: $white;
@@ -976,9 +978,9 @@ footer {
     }
 
     #footer-items {
+      @include font-block-open-sans(400, 18px, 24px);
       flex-shrink: 1;
       flex-grow: 1;
-      //   border: 2px blue solid;
       align-self: center;
       list-style: none;
 
@@ -991,7 +993,13 @@ footer {
       margin: 0;
       gap: 0.5rem;
 
-      @include font-block-open-sans(400, 18px, 24px);
+      @media only screen and (max-width: 767px) {
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        justify-items: center;
+        width: 100%;
+      }
 
       .footer-links {
         flex-shrink: 1;
@@ -999,21 +1007,55 @@ footer {
         color: $white;
       }
 
-      .footer-contact-btn {
-        @include contact-btn(0);
-      }
-
-      #footer-contact-link {
-        @include contact-link();
-      }
-
       .footer-login-btn {
-        @include login-btn(0, 0);
+        background: $bodyColor;
+        box-shadow: inset 0px 0px 4px 4px rgba(81, 6, 117, 1);
+        border-radius: 15px;
+        width: max-content;
+        padding: 0.2rem 1rem;
       }
 
       #footer-login-link {
-        @include login-link();
+        text-transform: uppercase;
+        text-align: center;
+        text-shadow: 0px 1px 2px $white;
+      }
+
+      .footer-contact-btn {
+        background: $purple;
+        border-radius: 15px;
+        box-shadow: inset 0px 0px 4px 4px rgba(81, 6, 117, 1);
+        width: max-content;
+        padding: 0.2rem;
+      }
+
+      #footer-contact-link {
+        text-transform: uppercase;
+        text-align: center;
+        text-shadow: 0px 1px 2px $white;
       }
     }
+  }
+
+  hr {
+    border: 0;
+    height: 1px;
+    width: 70%;
+    margin: 20px auto;
+    border: 0;
+    height: 1px;
+    width: 80%;
+    margin: 20px auto;
+    background-image: linear-gradient(
+      to right,
+      rgba(81, 6, 117, 1),
+      $creamyWhite,
+      rgba(81, 6, 117, 1)
+    );
+  }
+
+  #copyright {
+    text-align: center;
+    @include font-block-open-sans(400, 18px, 24px);
   }
 }

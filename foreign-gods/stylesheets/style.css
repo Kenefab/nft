@@ -19,9 +19,9 @@ body {
   color: #ffffff;
   background: #510675;
   border-radius: 15px;
+  box-shadow: inset 0px 0px 4px 4px rgb(81, 6, 117);
   padding: 0 0.5rem;
   margin-left: 0;
-  box-shadow: inset 0px 0px 4px 4px rgb(81, 6, 117);
   max-width: 100%;
   text-align: center;
   padding: 0.5rem;
@@ -70,9 +70,9 @@ body {
 .menu-bar .contact-button {
   background: #510675;
   border-radius: 15px;
+  box-shadow: inset 0px 0px 4px 4px rgb(81, 6, 117);
   padding: 0 0.5rem;
   margin-left: 1.5rem;
-  box-shadow: inset 0px 0px 4px 4px rgb(81, 6, 117);
 }
 .menu-bar .contact-button #contact-link {
   text-transform: uppercase;
@@ -1409,22 +1409,25 @@ body {
 /*********************************************** footer styling *********************************************/
 footer {
   background: #40055c;
-  margin-top: 20rem;
+  margin-top: 2rem;
   width: 100%;
   padding-bottom: 0.5rem;
 }
 footer #footer-wrapper {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 2rem;
   justify-content: space-between;
   width: 100%;
   padding-top: 2rem;
+  flex-wrap: wrap;
+  align-items: center;
 }
 footer #footer-wrapper .footer-header {
   flex-shrink: 1;
   flex-grow: 1;
-  width: 30%;
+  width: 100%;
+  width: max-content;
   font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -1435,6 +1438,11 @@ footer #footer-wrapper .footer-header #footer-header-link {
   color: #ffffff;
 }
 footer #footer-wrapper #footer-items {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
   flex-shrink: 1;
   flex-grow: 1;
   align-self: center;
@@ -1446,41 +1454,63 @@ footer #footer-wrapper #footer-items {
   width: 70%;
   margin: 0;
   gap: 0.5rem;
-  font-family: "Open Sans", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 24px;
+}
+@media only screen and (max-width: 767px) {
+  footer #footer-wrapper #footer-items {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    justify-items: center;
+    width: 100%;
+  }
 }
 footer #footer-wrapper #footer-items .footer-links {
   flex-shrink: 1;
   flex-grow: 1;
   color: #ffffff;
 }
+footer #footer-wrapper #footer-items .footer-login-btn {
+  background: #110317;
+  box-shadow: inset 0px 0px 4px 4px rgb(81, 6, 117);
+  border-radius: 15px;
+  width: max-content;
+  padding: 0.2rem 1rem;
+}
+footer #footer-wrapper #footer-items #footer-login-link {
+  text-transform: uppercase;
+  text-align: center;
+  text-shadow: 0px 1px 2px #ffffff;
+}
 footer #footer-wrapper #footer-items .footer-contact-btn {
   background: #510675;
   border-radius: 15px;
-  padding: 0 0.5rem;
-  margin-left: 0;
   box-shadow: inset 0px 0px 4px 4px rgb(81, 6, 117);
+  width: max-content;
+  padding: 0.2rem;
 }
 footer #footer-wrapper #footer-items #footer-contact-link {
   text-transform: uppercase;
   text-align: center;
   text-shadow: 0px 1px 2px #ffffff;
 }
-footer #footer-wrapper #footer-items .footer-login-btn {
-  background: #110317;
-  box-shadow: inset 0px 0px 4px 4px rgb(81, 6, 117);
-  border-radius: 15px;
-  padding: 0 0.5rem;
-  margin-left: 0;
-  margin-right: 0;
+footer hr {
+  border: 0;
+  height: 1px;
+  width: 70%;
+  margin: 20px auto;
+  border: 0;
+  height: 1px;
+  width: 80%;
+  margin: 20px auto;
+  background-image: linear-gradient(to right, rgb(81, 6, 117), #dadada, rgb(81, 6, 117));
 }
-footer #footer-wrapper #footer-items #footer-login-link {
-  text-transform: uppercase;
+footer #copyright {
   text-align: center;
-  text-shadow: 0px 1px 2px #ffffff;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
 }
 
 /*# sourceMappingURL=style.css.map */
