@@ -27,6 +27,8 @@ body {
   padding: 0.5rem;
   text-transform: uppercase;
   float: right;
+  border: none;
+  outline: none;
   border-radius: 15%;
   font-family: "Poppins", sans-serif;
   font-style: normal;

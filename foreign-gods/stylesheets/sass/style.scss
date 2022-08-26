@@ -162,7 +162,8 @@ body {
   padding: 0.5rem;
   text-transform: uppercase;
   float: right;
-
+  border: none;
+  outline: none;
   border-radius: 15%;
   @include font-block-poppins(300, 20px, 30px);
 
