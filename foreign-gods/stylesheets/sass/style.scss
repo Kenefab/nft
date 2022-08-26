@@ -192,7 +192,11 @@ body {
 
   .contact-button {
     @include contact-btn(1.5rem);
+    width: max-content;
 
+    @media only screen and (max-width: 991px) {
+      @include contact-btn(1rem);
+    }
     #contact-link {
       @include contact-link();
     }
@@ -200,6 +204,11 @@ body {
 
   .login-button {
     @include login-btn(0.5rem, 0.5rem);
+    width: max-content;
+
+    @media only screen and (max-width: 991px) {
+      @include login-btn(1rem, 0);
+    }
 
     #login-link {
       @include login-link();
