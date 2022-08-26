@@ -3,6 +3,7 @@ $bodyColor: #110317;
 $white: #ffffff;
 $creamyWhite: #dadada;
 $purple: #510675;
+$font-poppins: "Poppins", sans-serif;
 
 //mixins
 @mixin font-block-open-sans($font-weight, $font-size, $line-height) {
@@ -127,6 +128,13 @@ $purple: #510675;
   display: inline-block; /* Needed to add space between the bullet and the text */
   width: 1em; /* Also needed for space (tweak if needed) */
   margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+
+@mixin purple-glow-container($border-radius) {
+  background: $bodyColor;
+  box-shadow: inset 0px 0px 4px 4px rgba(81, 6, 117, 1);
+  border-radius: $border-radius;
+  color: $creamyWhite;
 }
 
 /************************************************* base styles ***************************************/
@@ -459,13 +467,6 @@ body {
     }
 
     .media-group {
-      @mixin purple-glow-container($border-radius) {
-        background: $bodyColor;
-        box-shadow: inset 0px 0px 4px 4px rgba(81, 6, 117, 1);
-        border-radius: $border-radius;
-        color: $creamyWhite;
-      }
-
       text-align: center;
       @include purple-glow-container(17px);
 
@@ -719,7 +720,7 @@ body {
 
 /////////////////////////////////////////////////////////wrap6 div styling
 .wrap6 {
-  margin-top: 130px;
+  margin-top: 140px;
 
   #flex {
     display: flex;
@@ -743,6 +744,7 @@ body {
       h2 {
         @include font-block-poppins(700, 65px, 75px);
         @include h2-mq();
+        text-transform: uppercase;
 
         @media only screen and (max-width: 767px) {
           margin-top: 50px;
@@ -786,10 +788,7 @@ body {
 
       .image-star-container {
         width: 70%;
-        background: $bodyColor;
-        box-shadow: inset 0px 0px 4px 4px rgba(81, 6, 117, 1);
-        border-radius: 10px;
-        color: $creamyWhite;
+        @include purple-glow-container(10px);
         padding: 10px;
         display: flex;
 
@@ -824,6 +823,89 @@ body {
               }
             }
           }
+        }
+      }
+    }
+  }
+}
+
+.wrap7 {
+  margin-top: 120px;
+
+  h2 {
+    @include font-block-poppins(700, 65px, 75px);
+    @include h2-mq();
+    text-align: center;
+  }
+
+  form {
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 40px;
+
+    @media only screen and (max-width: 900px) {
+      margin-top: 30px;
+    }
+
+    @media only screen and (max-width: 500px) {
+      margin-top: 20px;
+    }
+
+    .input-container {
+      display: flex;
+      gap: 2rem;
+      flex-direction: column;
+      width: 100%;
+
+      input {
+        @include purple-glow-container(20px);
+        width: 100%;
+        padding: 1rem 2rem;
+        font-family: $font-poppins;
+        color: $creamyWhite;
+
+        @media only screen and (max-width: 900px) {
+          padding: 1rem 1rem;
+        }
+
+        &::placeholder {
+          color: $creamyWhite;
+        }
+      }
+    }
+
+    textarea {
+      @include purple-glow-container(30px);
+      min-height: 300px;
+      padding: 1rem 2rem;
+      font-family: $font-poppins;
+      color: $creamyWhite;
+
+      @media only screen and (max-width: 900px) {
+        padding: 1rem 1rem;
+      }
+
+      &::placeholder {
+        color: $creamyWhite;
+      }
+    }
+
+    .send-msg-btn {
+      margin-top: 0.5rem;
+      float: right;
+
+      @media only screen and (max-width: 900px) {
+        margin-top: 0;
+      }
+
+      button {
+        float: right;
+
+        span {
+          color: $creamyWhite;
         }
       }
     }

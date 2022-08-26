@@ -1082,7 +1082,7 @@ body {
 }
 
 .wrap6 {
-  margin-top: 130px;
+  margin-top: 140px;
 }
 .wrap6 #flex {
   display: flex;
@@ -1111,6 +1111,7 @@ body {
   font-weight: 700;
   font-size: 65px;
   line-height: 75px;
+  text-transform: uppercase;
 }
 @media only screen and (max-width: 991px) {
   .wrap6 #flex .our-clients-container h2 {
@@ -1252,6 +1253,129 @@ body {
   .wrap6 #flex .images-grid-conatiner .image-star-container .stars-group-container .star-container img {
     padding-top: 0;
   }
+}
+
+.wrap7 {
+  margin-top: 120px;
+}
+.wrap7 h2 {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 65px;
+  line-height: 75px;
+  text-align: center;
+}
+@media only screen and (max-width: 991px) {
+  .wrap7 h2 {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 60px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .wrap7 h2 {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 60px;
+  }
+}
+@media only screen and (max-width: 541px) {
+  .wrap7 h2 {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .wrap7 h2 {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 30px;
+  }
+}
+.wrap7 form {
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+@media only screen and (max-width: 900px) {
+  .wrap7 form {
+    margin-top: 30px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .wrap7 form {
+    margin-top: 20px;
+  }
+}
+.wrap7 form .input-container {
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  width: 100%;
+}
+.wrap7 form .input-container input {
+  background: #110317;
+  box-shadow: inset 0px 0px 4px 4px rgb(81, 6, 117);
+  border-radius: 20px;
+  color: #dadada;
+  width: 100%;
+  padding: 1rem 2rem;
+  font-family: "Poppins", sans-serif;
+  color: #dadada;
+}
+@media only screen and (max-width: 900px) {
+  .wrap7 form .input-container input {
+    padding: 1rem 1rem;
+  }
+}
+.wrap7 form .input-container input::placeholder {
+  color: #dadada;
+}
+.wrap7 form textarea {
+  background: #110317;
+  box-shadow: inset 0px 0px 4px 4px rgb(81, 6, 117);
+  border-radius: 30px;
+  color: #dadada;
+  min-height: 300px;
+  padding: 1rem 2rem;
+  font-family: "Poppins", sans-serif;
+  color: #dadada;
+}
+@media only screen and (max-width: 900px) {
+  .wrap7 form textarea {
+    padding: 1rem 1rem;
+  }
+}
+.wrap7 form textarea::placeholder {
+  color: #dadada;
+}
+.wrap7 form .send-msg-btn {
+  margin-top: 0.5rem;
+  float: right;
+}
+@media only screen and (max-width: 900px) {
+  .wrap7 form .send-msg-btn {
+    margin-top: 0;
+  }
+}
+.wrap7 form .send-msg-btn button {
+  float: right;
+}
+.wrap7 form .send-msg-btn button span {
+  color: #dadada;
 }
 
 /*********************************************** footer styling *********************************************/
