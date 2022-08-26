@@ -851,6 +851,8 @@ body {
   }
 }
 .wrap4 .see-all-button {
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
   float: right;
 }
@@ -1077,6 +1079,8 @@ body {
 }
 .wrap5 .more-info-button {
   margin-top: 1rem;
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
   float: right;
 }
@@ -1341,6 +1345,18 @@ body {
     padding: 1rem 1rem;
   }
 }
+.wrap7 form .input-container input::-webkit-input-placeholder {
+  color: #dadada;
+}
+.wrap7 form .input-container input::-moz-placeholder {
+  color: #dadada;
+}
+.wrap7 form .input-container input:-ms-input-placeholder {
+  color: #dadada;
+}
+.wrap7 form .input-container input::-ms-input-placeholder {
+  color: #dadada;
+}
 .wrap7 form .input-container input::placeholder {
   color: #dadada;
 }
@@ -1358,6 +1374,18 @@ body {
   .wrap7 form textarea {
     padding: 1rem 1rem;
   }
+}
+.wrap7 form textarea::-webkit-input-placeholder {
+  color: #dadada;
+}
+.wrap7 form textarea::-moz-placeholder {
+  color: #dadada;
+}
+.wrap7 form textarea:-ms-input-placeholder {
+  color: #dadada;
+}
+.wrap7 form textarea::-ms-input-placeholder {
+  color: #dadada;
 }
 .wrap7 form textarea::placeholder {
   color: #dadada;
